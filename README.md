@@ -1,4 +1,4 @@
-# Data Mules 🚲🛰️
+# Data Mules 🚗🛰️
 
 > Sistema móvil y de bajo consumo para el monitoreo ambiental urbano mediante un modelo de comunicación Store–Carry–Forward sobre LoRaWAN.
 

@@ -57,18 +57,39 @@
 
 ---
 
-## 🖼️ Imágenes del Diseño
+#---
 
-### Esquema y PCB
+# 🖨️ Diseño de PCB
 
-| Esquema Electrónico | Diseño de PCB |
-| :---: | :---: |
-| ![Esquema Electrónico](docs/images/schematic.png) | ![PCB Top/Bottom](docs/images/pcb_layout.png) |
+<table>
+  <tr>
+    <th>TOP view 2D</th>
+    <th>BOTTOM view 2D</th>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="imagenes/TOP2DJM.png" width="400">
+    </td>
+    <td align="center">
+      <img src="imagenes/BOTTOM2DJM.png" width="400">
+    </td>
+  </tr>
+</table>
 
-### Prototipo Ensamblado
-
-![Prototipo Data Mules](docs/images/prototype.jpg)
-*Figura 1: Vista del nodo sensor integrado en el chasis vehicular.*
+<table>
+  <tr>
+    <th>TOP view 3D</th>
+    <th>BOTTOM view 3D</th>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="imagenes/TOP3DJM.png" width="400">
+    </td>
+    <td align="center">
+      <img src="imagenes/BOTTOM3DJM.png" width="400">
+    </td>
+  </tr>
+</table>
 
 ---
 

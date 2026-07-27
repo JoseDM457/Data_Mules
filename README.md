@@ -18,37 +18,42 @@
 * **Parámetros Medidos:** Temperatura, humedad y calidad del aire.
 * **Almacenamiento Local:** Memoria no volátil integrada para retener mediciones sin conexión.
 
----
-
 ## 🛠️ Componentes Principales
 
-| Componente | Modelo / Referencia | Cantidad | Función |
+| Componente | Referencia / Modelo | Cantidad | Función / Descripción |
 | :--- | :--- | :---: | :--- |
-| **Microcontrolador** | *[ej. ESP32 / STM32WL]* | 1 | Procesamiento y gestión de energía |
-| **Módulo LoRa** | *[ej. SX1276 / RFM95W]* | 1 | Comunicación por radiofrecuencia |
-| **Sensor Ambiental** | *[ej. BME280 / SEN55]* | 1 | Lectura de temperatura, humedad y gases |
-| **Gestor de Carga** | *[ej. TP4056]* | 1 | Control de batería LiPo |
-| **Batería** | *[ej. LiPo 18650 3.7V]* | 1 | Alimentación del nodo |
+| **Placa de Control / LoRa** | BastWAN (Headers U2, U3) | 1 | Microcontrolador principal con conectividad LoRa integrada[cite: 1]. |
+| **Sensor Ambiental** | BME680 (U4) | 1 | Medición de temperatura, humedad, presión atmosférica y calidad del aire[cite: 1]. |
+| **Módulo GPS** | GT-U7 (U11) | 1 | Geolocalización en tiempo real del nodo móvil[cite: 1]. |
+| **Pantalla Display** | OLED I2C HS13L03B2C01 (U10) | 1 | Visualización local de estados y mediciones[cite: 1]. |
+| **Lector MicroSD** | Molex 1040310811 (SIM1) | 1 | Almacenamiento local de datos (*Store-Carry-Forward*)[cite: 1]. |
+| **Cargador de Baterías** | BQ25887RGER (U1) | 1 | Gestor de carga inteligente I2C para arreglo de baterías 2S[cite: 1]. |
+| **Regulador de Voltaje** | AMS1117-5.0 (U18) | 1 | Regulador lineal para línea de alimentación de 5V[cite: 1]. |
+| **Conector de Baterías** | BH-18650-A6AJ012 (U12, U13) | 2 | Portabaterías para celdas Li-ion 18650 en serie (2S)[cite: 1]. |
+| **Sensor de Temp. Externa** | Clemas DB125-3.5-2P (U14, U15) | 2 | Terminales de conexión para sensor de temperatura DS18B20[cite: 1]. |
+| **Puerto USB** | USB-C U262-161N-4BVC11 (USB1) | 1 | Interfaz de alimentación y carga de batería[cite: 1]. |
 
 ---
 
 ## 📌 Asignación de Pines (Pinout)
 
-### Conexión de Sensores y Módulos
+### Bus de Comunicaciones e Interfaces
 
-| Módulo / Sensor | Pin del Módulo | Pin del Microcontrolador | Protocolo / Función |
-| :--- | :--- | :--- | :--- |
-| **Sensor Ambiental** | VCC | 3.3V | Alimentación |
-| | GND | GND | Tierra |
-| | SDA | GPIO 21 | I2C Data |
-| | SCL | GPIO 22 | I2C Clock |
-| **Módulo LoRa** | VCC | 3.3V | Alimentación |
-| | GND | GND | Tierra |
-| | MISO | GPIO 19 | SPI MISO |
-| | MOSI | GPIO 23 | SPI MOSI |
-| | SCK | GPIO 18 | SPI Clock |
-| | CS / NSS | GPIO 5 | Chip Select |
-| | DIO0 | GPIO 2 | Interrupción |
+| Periférico | Pin del Módulo | Pin BastWAN | Protocolo / Función | Observaciones |
+| :--- | :--- | :--- | :--- | :--- |
+| **BME680** | SDA | SDA (U2-12) | I2C | Bus I2C principal (Pull-ups R1 y R2 de 4.7kΩ)[cite: 1] |
+| | SCL | SCL (U2-11) | I2C | Bus I2C principal[cite: 1] |
+| **Pantalla OLED** | SDA | SDA (U2-12) | I2C | Bus I2C principal[cite: 1] |
+| | SCL | SCL (U2-11) | I2C | Bus I2C principal[cite: 1] |
+| **Cargador BQ25887**| SDA | SDA (U2-12) | I2C | Bus I2C principal[cite: 1] |
+| | SCL | SCL (U2-11) | I2C | Bus I2C principal[cite: 1] |
+| **Módulo GPS GT-U7**| TXD | RX (U3-14) | UART RX | Recepción de datos NMEA[cite: 1] |
+| | RXD | TX (U3-15) | UART TX | Transmisión de comandos[cite: 1] |
+| **Lector MicroSD** | SCK (CLK) | SCK (U3-11) | SPI Clock | Reloj de bus SPI[cite: 1] |
+| | DAT0 (DO) | MISO (U3-13) | SPI MISO | Entrada de datos SPI[cite: 1] |
+| | CMD (DI) | MOSI (U3-12) | SPI MOSI | Salida de datos SPI[cite: 1] |
+| | CD/DAT3 (CS) | Pin 10 (U2-7) | SPI CS | Chip Select para MicroSD[cite: 1] |
+| **Sensor DS18B20** | DATA | Pin A0 (U3-5) | 1-Wire / GPIO | Lectura digital con Pull-up R11 (4.7kΩ)[cite: 1] |
 
 ---
 

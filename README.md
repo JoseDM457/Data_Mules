@@ -57,8 +57,6 @@
 
 ---
 
-#---
-
 # 🖨️ Diseño de PCB
 
 <table>

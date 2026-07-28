@@ -6,7 +6,7 @@
 
 ## 📝 Descripción del Proyecto
 
-**Data Mules** es una plataforma de monitoreo ambiental diseñada para recopilar datos clave en entornos urbanos donde la cobertura de red no es continua. El sistema aprovecha la movilidad de vehículos (nodos móviles) para recolectar, almacenar de forma local y reenviar parámetros ambientales cuando se detecta una puerta de enlace (*gateway*) o un nodo cercano.
+**Data Mules** es una plataforma de monitoreo ambiental diseñada para recopilar datos clave en entornos urbanos donde la cobertura de red no es continua. El sistema aprovecha la movilidad de vehículos (nodos móviles) para recolectar, almacenar de forma local y reenviar parámetros ambientales cuando se detecta un gateway o un nodo cercano.
 
 ---
 
@@ -14,9 +14,9 @@
 
 * **Modelo de Comunicación:** Basado en *Store–Carry–Forward* (Almacenamiento, transporte y reenvío).
 * **Protocolo Inalámbrico:** Cobertura oportunista mediante LoRaWAN / LoRa P2P.
-* **Bajo Consumo:** Optimizado para funcionar de forma autónoma con baterías o energía cosechada.
-* **Parámetros Medidos:** Temperatura, humedad y calidad del aire.
-* **Almacenamiento Local:** Memoria no volátil integrada para retener mediciones sin conexión.
+* **Bajo Consumo:** Optimizado para funcionar de forma autónoma con baterías.
+* **Parámetros Medidos:** GPS, Temperatura, humedad y calidad del aire.
+* **Almacenamiento Local:** Memoria SD no volátil integrada para retener mediciones sin conexión.
 
 ---
 

@@ -93,19 +93,12 @@
 
 ## 🛡️ Certificación OSHW
 
-Este proyecto cumple con la definición de **Hardware de Código Abierto (OSHW)** y está certificado por la *Open Source Hardware Association (OSHWA)*.
-
-* **UID de Certificación OSHWA:** `[ej. ES000001]`
-* **Enlace al Registro Oficial:** [Ver Certificación en OSHWA](https://certification.oshwa.org/)
-
-![OSHWA Badge](https://raw.githubusercontent.com/oshwa/oshw-badges/main/osw-certified-mark/svg/OSHW_mark_US000000.svg)
-
 ---
 
 ## 📜 Licencias
 
 Este proyecto utiliza licencias de código abierto independientes para software y hardware:
 
-* **Hardware:** [CERN-OHL-P-2.0](https://cern-ohl.web.cern.ch/) *(o la licencia de HW que elijas, ej. CC-BY-SA 4.0)*.
-* **Software / Firmware:** [MIT License](LICENSE-MIT) *(o GPLv3, Apache 2.0)*.
+* **Hardware:** [CERN-OHL-P-2.0](https://cern-ohl.web.cern.ch/) 
+* **Software / Firmware:** [MIT License](LICENSE-MIT)
 * **Documentación:** [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/).
